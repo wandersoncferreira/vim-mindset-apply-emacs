@@ -12,7 +12,7 @@ material is layout.
 Very important note 2: I am not a good vimmer.
 
 
-# [Vim Navigation Commands](https://youtu.be/Qem8cpbJeYc)
+# 1. [Vim Navigation Commands](https://youtu.be/Qem8cpbJeYc)
 
   | Emacs Keys | Objective                                                       | Vim counterpart |
   |------------|-----------------------------------------------------------------|-----------------|
