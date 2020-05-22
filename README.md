@@ -106,15 +106,15 @@ Summary
 
 # 3. <a name="vim-do-typing"></a> [Let Vim Do The Typing](https://youtu.be/3TX3kV3TICU)
 
-| Emacs Keys     | Objectives                                               | Vim                            |
-|----------------|----------------------------------------------------------|--------------------------------|
-| C-i            | Complete word with previous occurrences                  | C-p                            |
-| M-/            | Complete with omni-completion                            | `several keychords in ^X-mode` |
-| M-\            | Complete file names `(comint-dynamic-complete-filename)` | C-x C-f (in X mode)            |
-| C-c l          | Complete last line from context `(bk/try-complete-line)` | C-x C-l (in X mode)            |
-| C-x r s <char> | Copy region into register <char> `(copy-to-register)     |                                |
-| C-x r i <char> | Insert text from register <char> `(insert-register)`     |                                |
-| s-.            | Find tags (C-Tags)                                       |                                |
+| Emacs Keys       | Objectives                                               | Vim                            |
+|------------------|----------------------------------------------------------|--------------------------------|
+| C-i              | Complete word with previous occurrences                  | C-p                            |
+| M-/              | Complete with omni-completion                            | `several keychords in ^X-mode` |
+| M-\              | Complete file names `(comint-dynamic-complete-filename)` | C-x C-f (in X mode)            |
+| C-c l            | Complete last line from context `(bk/try-complete-line)` | C-x C-l (in X mode)            |
+| C-x r s \<char\> | Copy region into register <char> `(copy-to-register)`    |                                |
+| C-x r i \<char\> | Insert text from register <char> `(insert-register)`     |                                |
+| s-.              | Find tags (C-Tags)                                       |                                |
 
 - Vim users seems to take great advantage of *registers*
 - Would be nice to have tabs? (Idk, for now I am just toooo used to changing buffers with `ido`)
