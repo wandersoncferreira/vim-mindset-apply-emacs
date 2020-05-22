@@ -6,10 +6,10 @@ they are editing and when they are not. On the other hand, Emacs has
 some good counterparts. I want to document here some tricks and best
 practices that I found in Vim material but backported to Emacs.
 
-Very important note 1: There is not, yet, a clear order to how the
-material is layout.
+**Very important note 1: There is not, yet, a clear order to how the
+material is layout.**
 
-Very important note 2: I am not a good vimmer.
+**Very important note 2: I am not a good vimmer.**
 
 Invest time to sharp your editing skills!
 
