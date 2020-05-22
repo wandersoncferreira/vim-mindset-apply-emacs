@@ -1,10 +1,14 @@
 # Vim tricks done in Emacs
 
 Truth be told, the vim community is just driven by text editing
-efficiency! And they have different modes to make cristal clear when
+efficiency!
+
+They also have different modes to make cristal clear distinction when
 they are editing and when they are not. On the other hand, Emacs has
-some good counterparts. I want to document here some tricks and best
-practices that I found in Vim material but backported to Emacs.
+some good counterparts. 
+
+I want to document here some tricks and best practices that I found in
+Vim material but backported to Emacs.
 
 **Very important note 1: There is not, yet, a clear order to how the
 material is layout.**
