@@ -1,5 +1,4 @@
 # Vim tricks done in Emacs
-
 Truth be told, the vim community is just driven by text editing
 efficiency!
 
@@ -11,7 +10,7 @@ I want to document here some tricks and best practices that I found in
 Vim material but backported to Emacs.
 
 **Very important note 1: There is not, yet, a clear order to how the
-material is layout.**
+material is laid out.**
 
 **Very important note 2: I am not a good vimmer.**
 
@@ -25,6 +24,23 @@ Summary
 1. [Vim Navigation Commands](#vim-navigation)
 2. [Improving Vim Speed](#vim-impr-speed)
 3. [Let Vim Do The Typing](#vim-do-typing)
+
+
+### General tips
+
+   1. Install [keyfreq](https://github.com/dacap/keyfreq) and regularly monitor your usage.
+   2. You should not use your mouse... I know you know.. but, really, install [disable-mouse](https://github.com/purcell/disable-mouse)
+   3. I keep `C-x C-s` to save my buffers, no need for that, install [auto-save](https://www.emacswiki.org/emacs/auto-save.el)
+   4. Muscle memory is though to change, keep this function around: `bk/shame-on-you`
+
+```elisp
+(defun bk/shame-on-you ()
+  (interactive)
+  (message "Stop this bad habbit!"))
+
+(global-set-key (kbd "C-x C-s") #'bk/shame-on-you)
+```
+
 
 
 # 1. <a name="vim-navigation"></a> [Vim Navigation Commands](https://youtu.be/Qem8cpbJeYc)
