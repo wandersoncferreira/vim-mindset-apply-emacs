@@ -30,7 +30,7 @@ Summary
 # 1. <a name="vim-navigation"></a> [Vim Navigation Commands](https://youtu.be/Qem8cpbJeYc)
 
   | Emacs Keys | Objective                                                       | Vim counterpart |
-  |------------+-----------------------------------------------------------------+-----------------|
+  |------------|-----------------------------------------------------------------|-----------------|
   | M-r        | Go to the last,middle,top visible line of the screen            | {H,L,G}         |
   | C-l        | Center the current line                                         |                 |
   | C-v, M-v   | Scroll without moving the cursor `(bk/scroll-{up,down})`        |                 |
@@ -107,7 +107,7 @@ Summary
 # 3. <a name="vim-do-typing"></a> [Let Vim Do The Typing](https://youtu.be/3TX3kV3TICU)
 
 | Emacs Keys     | Objectives                                               | Vim                            |
-|----------------+----------------------------------------------------------+--------------------------------|
+|----------------|----------------------------------------------------------|--------------------------------|
 | C-i            | Complete word with previous occurrences                  | C-p                            |
 | M-/            | Complete with omni-completion                            | `several keychords in ^X-mode` |
 | M-\            | Complete file names `(comint-dynamic-complete-filename)` | C-x C-f (in X mode)            |
