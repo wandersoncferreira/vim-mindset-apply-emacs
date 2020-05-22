@@ -15,7 +15,7 @@ Very important note 2: I am not a good vimmer.
 # [Vim Navigation Commands](https://youtu.be/Qem8cpbJeYc)
 
   | Emacs Keys | Objective                                                       | Vim counterpart |
-  |------------+-----------------------------------------------------------------+-----------------|
+  |------------|-----------------------------------------------------------------|-----------------|
   | M-r        | Go to the last,middle,top visible line of the screen            | {H,L,G}         |
   | C-l        | Center the current line                                         |                 |
   | C-v, M-v   | Scroll without moving the cursor `(bk/scroll-{up,down})`        |                 |
