@@ -107,7 +107,7 @@ Summary
 # 3. <a name="vim-do-typing"></a> [Let Vim Do The Typing](https://youtu.be/3TX3kV3TICU)
 
 | Emacs Keys     | Objectives                                               | Vim                            |
-|----------------+----------------------------------------------------------+--------------------------------|
+|----------------|----------------------------------------------------------|--------------------------------|
 | C-i            | Complete word with previous occurrences                  | C-p                            |
 | M-/            | Complete with omni-completion                            | `several keychords in ^X-mode` |
 | M-\            | Complete file names                                      | C-x C-f (in X mode)            |
