@@ -1,4 +1,5 @@
-# Vim tricks done in Emacs
+# Vim mindset apply Emacs
+
 Truth be told, the vim community is just driven by text editing
 efficiency!
 
