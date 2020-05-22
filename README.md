@@ -80,7 +80,7 @@ Summary
 ```
 
 #### External packages necessary
-1. [Jump char](https://github.com/lewang/jump-char)
+1. [Jump char](https://github.com/lewang/jump-char) - similar to `f` and `t` commands in Vim
 
 
 # 2. <a name="vim-impr-speed"></a> [Improving Vim Speed](https://youtu.be/OnUiHLYZgaA)
