@@ -20,6 +20,7 @@ Invest time to sharp your editing skills!
 Summary
 1. [Vim Navigation Commands](#vim-navigation)
 2. [Improving Vim Speed](#vim-impr-speed)
+3. [Let Vim Do The Typing](#vim-do-typing)
 
 
 # 1. <a name="vim-navigation"></a> [Vim Navigation Commands](https://youtu.be/Qem8cpbJeYc)
