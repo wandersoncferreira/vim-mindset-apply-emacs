@@ -14,7 +14,12 @@ Very important note 2: I am not a good vimmer.
 Invest time to sharp your editing skills!
 
 
-# 1. [Vim Navigation Commands](https://youtu.be/Qem8cpbJeYc)
+Summary
+1. [Vim Navigation Commands](#vim-navigation)
+2. [Improving Vim Speed](#vim-impr-speed)
+
+
+# 1. <a name="vim-navigation"></a> [Vim Navigation Commands](https://youtu.be/Qem8cpbJeYc)
 
   | Emacs Keys | Objective                                                       | Vim counterpart |
   |------------|-----------------------------------------------------------------|-----------------|
@@ -78,7 +83,7 @@ Invest time to sharp your editing skills!
 1. [Jump char](https://github.com/lewang/jump-char)
 
 
-# 2. [Improving Vim Speec](https://youtu.be/OnUiHLYZgaA)
+# 2. <a name="vim-impr-speed"></a> [Improving Vim Speed](https://youtu.be/OnUiHLYZgaA)
 
 | Emacs                                               | Vim                                             |
 |-----------------------------------------------------|-------------------------------------------------|
