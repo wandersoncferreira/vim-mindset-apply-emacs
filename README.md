@@ -11,6 +11,9 @@ material is layout.**
 
 **Very important note 2: I am not a good vimmer.**
 
+**Very important note 3: I revisit the materials regularly, might
+complement with time**
+
 Invest time to sharp your editing skills!
 
 
@@ -22,16 +25,16 @@ Summary
 # 1. <a name="vim-navigation"></a> [Vim Navigation Commands](https://youtu.be/Qem8cpbJeYc)
 
   | Emacs Keys | Objective                                                       | Vim counterpart |
-  |------------|-----------------------------------------------------------------|-----------------|
+  |------------+-----------------------------------------------------------------+-----------------|
   | M-r        | Go to the last,middle,top visible line of the screen            | {H,L,G}         |
   | C-l        | Center the current line                                         |                 |
   | C-v, M-v   | Scroll without moving the cursor `(bk/scroll-{up,down})`        |                 |
   | C-a        | `bk/smart-beginning-of-line`                                    | 0               |
   | C-e        | `bk/smart-end-of-line`                                          | $               |
   | M-s .      | Search for the current word on point and look other occurrences | *               |
-  | C-.        | Set a register at a specific point `(bk/point-to-register)`     |                 |
-  | C-,        | Jump back to register specified above `(bk/jump-to-register)`   |                 |
-  | M-n        | `(jump-char-forward)`                                           |                 |
+  | C-.        | Set a register at a specific point `(bk/point-to-register)`     | C-o             |
+  | C-,        | Jump back to register specified above `(bk/jump-to-register)`   | C-i             |
+  | M-n        | `(jump-char-forward)`                                           | {f,t}           |
   | M-p        | `(jump-char-backward)`                                          |                 |
   | M-{a,e}    | Move through paragraphs                                         |                 |
   | M-k        | Kill paragraph                                                  |                 |
@@ -93,4 +96,42 @@ Summary
 | If you hold any character consider this a smell     | If you hold any character consider this a smell |
 | **NOT CLEAR YET HOW TO HANDLE IN EMACS**            | Use the repeat command                          |
 | Use fuzzy finders (learn ripgrep though)            | Use fuzzy finders                               |
+
+
+
+# 3. <a name="vim-do-typing"></a> [Let Vim Do The Typing](https://youtu.be/3TX3kV3TICU)
+
+| Emacs Keys     | Objectives                                               | Vim                            |
+|----------------+----------------------------------------------------------+--------------------------------|
+| C-i            | Complete word with previous occurrences                  | C-p                            |
+| M-/            | Complete with omni-completion                            | `several keychords in ^X-mode` |
+| M-\            | Complete file names                                      | C-x C-f (in X mode)            |
+| C-c l          | Complete last line from context `(bk/try-complete-line)` | C-x C-l (in X mode)            |
+| C-x r s <char> | Copy region into register <char> `(copy-to-register)     |                                |
+| C-x r i <char> | Insert text from register <char> `(insert-register)`     |                                |
+| s-.            | Find tags (C-Tags)                                       |                                |
+
+- Vim users seems to take great advantage of *registers*
+- Would be nice to have tabs? (Idk, for now I am just toooo used to changing buffers with `ido`)
+- Is real nice to have a `drop-down-menu` to your completions, `auto-complete` package seems more suitable
+- C Tags is cool! I made the setup but I am not using that much.
+
+You should read [Saving Text in Registers](https://www.gnu.org/software/emacs/manual/html_node/emacs/Text-Registers.html#Text-Registers)
+
+#### Functions
+
+```elisp
+(fset 'bk/try-complete-line
+      (make-hippie-expand-function '(try-expand-line)))
+
+;;; necessary to c-tags
+(setq path-to-ctags "/usr/bin/ctags")
+
+(defun bk/create-tags (dirname)
+  "Create tags file to a project located at DIRNAME."
+  (interactive "DDirectory: ")
+  (shell-command
+   (format "%s -f TAGS -e -R %s" path-to-ctags
+	   (directory-file-name dirname))))
+```
 
