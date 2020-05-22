@@ -11,6 +11,8 @@ material is layout.
 
 Very important note 2: I am not a good vimmer.
 
+Invest time to sharp your editing skills!
+
 
 # 1. [Vim Navigation Commands](https://youtu.be/Qem8cpbJeYc)
 
@@ -74,3 +76,16 @@ Very important note 2: I am not a good vimmer.
 
 #### External packages necessary
 1. [Jump char](https://github.com/lewang/jump-char)
+
+
+# 2. [Improving Vim Speec](https://youtu.be/OnUiHLYZgaA)
+
+| Emacs                                               | Vim                                             |
+|-----------------------------------------------------|-------------------------------------------------|
+| Should I use more commands to movements and editing | Stay away from insert mode                      |
+| Stop using arrow keys                               | Stop using arrow keys                           |
+| Use more `jump-char` to move around                 | Use more `f` and `t` to movement                |
+| If you hold any character consider this a smell     | If you hold any character consider this a smell |
+| **NOT CLEAR YET HOW TO HANDLE IN EMACS**            | Use the repeat command                          |
+| Use fuzzy finders (learn ripgrep though)            | Use fuzzy finders                               |
+
