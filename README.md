@@ -25,6 +25,7 @@ Summary
 1. [Vim Navigation Commands](#vim-navigation)
 2. [Improving Vim Speed](#vim-impr-speed)
 3. [Let Vim Do The Typing](#vim-do-typing)
+4. [More instantly better vim](#more-instantly-vim)
 
 
 ### General tips
@@ -48,7 +49,7 @@ Summary
 
   | Emacs Keys | Objective                                                       | Vim counterpart |
   |------------|-----------------------------------------------------------------|-----------------|
-  | M-r        | Go to the last,middle,top visible line of the screen            | {H,L,G}         |
+  | M-r        | Go to the last, middle,top visible line of the screen            | {H,L,G}         |
   | C-l        | Center the current line                                         |                 |
   | C-v, M-v   | Scroll without moving the cursor `(bk/scroll-{up,down})`        |                 |
   | C-a        | `bk/smart-beginning-of-line`                                    | 0               |
@@ -157,3 +158,13 @@ You should read [Saving Text in Registers](https://www.gnu.org/software/emacs/ma
 	   (directory-file-name dirname))))
 ```
 
+
+# 4. <a name="more-instantly-vim"></a> [More instantly better vim](https://www.youtube.com/watch?v=aHm36-na4-4)
+
+
+1. Set column to 100 (I like this idea too) `(setq-default fill-column 100)`
+2. Highlight all the chars that passes that column `(setq whitespace-line-column 100)`
+3. No tabs in the beginning of the fines and no trailing spaces
+4. Highlight tabs and trailing whitespaces `(setq whitespace-style '(trailing tabs tab-mark))`
+5. Remap very frequently commands to more useful ones
+6. Always think how to improve your current workflow instead of memorizing keys
