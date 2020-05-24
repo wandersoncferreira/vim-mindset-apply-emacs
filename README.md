@@ -234,9 +234,9 @@ from Magnars. I made the following bindings:
 (global-set-key (kbd "M-o") 'change-outer)
 ```
 
-What is interesting to notice in Emacs is the usefulness of this pattern, we does not need different
+What is interesting to notice in Emacs is the usefulness of this pattern, we do not need different
 bindings to these vim commands `ci<char>`, `di<char>`, and `yi<char>` meanings
-**{change,delete,copy} inside <char>**. And why is that? When you `change-inner` in Emacs, the text
+**{change, delete,copy} inside <char>**. And why is that? When you `change-inner` in Emacs, the text
 is killed and sent to the `kill-ring`, therefore if you wanted `delete` that text, well done you
 just did it.
 
