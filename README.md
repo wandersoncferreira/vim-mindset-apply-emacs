@@ -180,7 +180,7 @@ You should read [Saving Text in Registers](https://www.gnu.org/software/emacs/ma
 
 1. Set column to 100 (I like this idea too) `(setq-default fill-column 100)`
 2. Highlight all the chars that passes that column `(setq whitespace-line-column 100)`
-3. No tabs in the beginning of the fines and no trailing spaces
+3. No tabs in the beginning of the lines and no trailing spaces
 4. Highlight tabs and trailing whitespaces `(setq whitespace-style '(trailing tabs tab-mark))`
 5. Remap very frequently commands to more useful ones
 6. Always think how to improve your current workflow instead of memorizing keys
