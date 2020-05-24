@@ -222,3 +222,24 @@ using the Universal Argument `C-u` and a negative arg e.g. `C-u -1`.
 ```
 
 Bound to `C-c k f` and `C-c k b` to `kill forward` and `kill backward`
+
+
+### Change inner
+
+I became very addicted to [change-inner](https://github.com/magnars/change-inner.el) Emacs package
+from Magnars. I made the following bindings:
+
+```elisp
+(global-set-key (kbd "M-i") 'change-inner)
+(global-set-key (kbd "M-o") 'change-outer)
+```
+
+What is interesting to notice in Emacs is the usefulness of this pattern, we does not need different
+bindings to these vim commands `ci<char>`, `di<char>`, and `yi<char>` meanings
+**{change,delete,copy} inside <char>**. And why is that? When you `change-inner` in Emacs, the text
+is killed and sent to the `kill-ring`, therefore if you wanted `delete` that text, well done you
+just did it.
+
+If you wanted to `change` the text, well done you just did it.  If you wanted to `copy` the text,
+well done you just did it... but you "lost" the text, right? Yeah, just use `C-/` to undo and then
+`C-y` to paste where you want.
