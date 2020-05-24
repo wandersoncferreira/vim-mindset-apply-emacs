@@ -7,8 +7,23 @@ They also have different modes to make cristal clear distinction when
 they are editing and when they are not. On the other hand, Emacs has
 some good counterparts.
 
-I want to document here some tricks and best practices that I found in
-Vim material but backported to Emacs.
+
+Another great material is the blog post [Stop the Vim Configuration
+Madness](https://medium.com/usevim/stop-the-vim-configuration-madness-c825578bbf3e) which can be
+easily transported to Emacs community too, there are a very vast amount of blogs, youtube videos,
+screencasts, and whatnot only about *plugins*. I do use a bunch of them, but I am currently
+interested in **programming environments** which consist for the majority of time on **i) editing
+text, ii) reading text, iii) navigation in files**, and therefore our motto here will be:
+
+
+&nbsp;
+&nbsp;
+"You know what improves productivity? Mastering motions and operators."
+&nbsp;
+&nbsp;
+
+I want to document here some tricks and best practices that I found in Vim material but back-ported
+to Emacs.
 
 **Very important note 1: There is not, yet, a clear order to how the
 material is laid out.**
