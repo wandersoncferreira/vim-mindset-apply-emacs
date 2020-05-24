@@ -5,7 +5,7 @@ efficiency!
 
 They also have different modes to make cristal clear distinction when
 they are editing and when they are not. On the other hand, Emacs has
-some good counterparts. 
+some good counterparts.
 
 I want to document here some tricks and best practices that I found in
 Vim material but backported to Emacs.
@@ -26,6 +26,7 @@ Summary
 2. [Improving Vim Speed](#vim-impr-speed)
 3. [Let Vim Do The Typing](#vim-do-typing)
 4. [More instantly better vim](#more-instantly-vim)
+5. [My own customizations based on Vim lessons](#my-custom-lessons)
 
 
 ### General tips
@@ -168,3 +169,56 @@ You should read [Saving Text in Registers](https://www.gnu.org/software/emacs/ma
 4. Highlight tabs and trailing whitespaces `(setq whitespace-style '(trailing tabs tab-mark))`
 5. Remap very frequently commands to more useful ones
 6. Always think how to improve your current workflow instead of memorizing keys
+
+
+# 5. <a name="my-custom-lessons"></a> [My own customizations based on Vim lessons]
+
+### Yet another `kill-word`
+
+Emacs `M-d` `(kill-word)` actually kills the word from the cursor position *forward*. However, the
+defaults of vim makes more sense to me: kill the *entire* word.
+
+```elisp
+(defun bk/kill-inner-word ()
+  "Kills the entire word your cursor is in. Equivalent to ciw in vim."
+  (interactive)
+  (forward-char 1)
+  (backward-word)
+  (kill-word 1))
+```
+
+Bound that to `C-c k w`, as `C-c` is reserved to user bindings, them `k w` is for `kill word`.
+
+
+### Copy whole line
+
+The same spirit for the above customization, the copy whole line works despite your position in the
+current line.
+
+```elisp
+(defun bk/copy-whole-line ()
+  "Copies a line without regard for cursor position."
+  (interactive)
+  (save-excursion
+    (kill-new
+     (buffer-substring
+      (point-at-bol)
+      (point-at-eol)))))
+```
+
+Bound to `C-c y l` meaning `y l` `yank line`.
+
+### Zap commands
+
+I like the idea of the Zap commands. Killing forward up to a defined character, but I missed a `kill
+backward up to` in the same sense, so you can change the direction of the default `zap-up-to-char`
+using the Universal Argument `C-u` and a negative arg e.g. `C-u -1`.
+
+```elisp
+(defun bk/zap-up-to-char-backward (arg char)
+  (interactive "p\ncZap up to char backward: ")
+  (save-excursion
+    (zap-up-to-char -1 char)))
+```
+
+Bound to `C-c k f` and `C-c k b` to `kill forward` and `kill backward`
