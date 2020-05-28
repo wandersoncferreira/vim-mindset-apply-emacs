@@ -49,7 +49,7 @@ Summary
 
    1. Install [keyfreq](https://github.com/dacap/keyfreq) and regularly monitor your usage.
    2. You should not use your mouse... I know you know.. but, really, install [disable-mouse](https://github.com/purcell/disable-mouse)
-   3. I keep `C-x C-s` to save my buffers, no need for that, install [auto-save](https://www.emacswiki.org/emacs/auto-save.el)
+   3. I keep `C-x C-s` to save my buffers, no need for that, use the builtin `auto-save-visited-mode`.
    4. Muscle memory is tough to change, keep this function around: `bk/shame-on-you`
 
 ```elisp
