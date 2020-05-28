@@ -66,18 +66,18 @@ Summary
 
   | Emacs Keys | Objective                                                       | Vim counterpart |
   |------------|-----------------------------------------------------------------|-----------------|
-  | M-r        | Go to the last, middle,top visible line of the screen            | {H,L,G}         |
+  | M-r        | Go to the last, middle,top visible line of the screen           | {H,L,M}         |
   | C-l        | Center the current line                                         |  {z,z}          |
-  | C-v, M-v   | Scroll without moving the cursor `(bk/scroll-{up,down})`        |                 |
+  | C-v, M-v   | Scroll without moving the cursor `(bk/scroll-{up,down})`        |  C-y, C-e       |
   | C-a        | `bk/smart-beginning-of-line`                                    | 0               |
   | C-e        | `bk/smart-end-of-line`                                          | $               |
   | M-s .      | Search for the current word on point and look other occurrences | *               |
   | C-.        | Set a register at a specific point `(bk/point-to-register)`     | C-o             |
   | C-,        | Jump back to register specified above `(bk/jump-to-register)`   | C-i             |
-  | M-n        | `(jump-char-forward)`                                           | {f,t}           |
-  | M-p        | `(jump-char-backward)`                                          |                 |
-  | M-{a,e}    | Move through paragraphs                                         |                 |
-  | M-k        | Kill paragraph                                                  |                 |
+  | M-n        | `(jump-char-forward)`                                           | f,t             |
+  | M-p        | `(jump-char-backward)`                                          | F, T            |
+  | M-{a,e}    | Move through paragraphs                                         | { and }         |
+  | M-k        | Kill paragraph                                                  | dap             |
 
 ####  Custom functions referenced above
 
@@ -147,8 +147,8 @@ Summary
 | M-/              | Complete with omni-completion                            | `several keychords in ^X-mode` |
 | M-\              | Complete file names `(comint-dynamic-complete-filename)` | C-x C-f (in X mode)            |
 | C-c l            | Complete last line from context `(bk/try-complete-line)` | C-x C-l (in X mode)            |
-| C-x r s \<char\> | Copy region into register <char> `(copy-to-register)`    |                                |
-| C-x r i \<char\> | Insert text from register <char> `(insert-register)`     |                                |
+| C-x r s \<char\> | Copy region into register <char> `(copy-to-register)`    | "<char>yy                       |
+| C-x r i \<char\> | Insert text from register <char> `(insert-register)`     | "<char>p                        |
 | s-.              | Find tags (C-Tags)                                       |                                |
 
 - Vim users seems to take great advantage of *registers*
@@ -250,15 +250,11 @@ from Magnars. I made the following bindings:
 (global-set-key (kbd "M-o") 'change-outer)
 ```
 
-What is interesting to notice in Emacs is the usefulness of this pattern, we do not need different
-bindings to these vim commands `ci<char>`, `di<char>`, and `yi<char>` meanings
-**{change, delete,copy} inside <char>**. And why is that? When you `change-inner` in Emacs, the text
-is killed and sent to the `kill-ring`, therefore if you wanted `delete` that text, well done you
-just did it.
-
 If you wanted to `change` the text, well done you just did it.  If you wanted to `copy` the text,
 well done you just did it... but you "lost" the text, right? Yeah, just use `C-/` to undo and then
 `C-y` to paste where you want.
+
+Same behaviour is also observed in Vim.
 
 
 # 6. <a name="7vim"></a> [7 Habits for Effective Text Editing 2.0 by Molenaar](https://youtu.be/p6K4iIMlouI)
