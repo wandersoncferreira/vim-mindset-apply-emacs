@@ -67,7 +67,7 @@ Summary
   | Emacs Keys | Objective                                                       | Vim counterpart |
   |------------|-----------------------------------------------------------------|-----------------|
   | M-r        | Go to the last, middle,top visible line of the screen            | {H,L,G}         |
-  | C-l        | Center the current line                                         |                 |
+  | C-l        | Center the current line                                         |  {z,z}          |
   | C-v, M-v   | Scroll without moving the cursor `(bk/scroll-{up,down})`        |                 |
   | C-a        | `bk/smart-beginning-of-line`                                    | 0               |
   | C-e        | `bk/smart-end-of-line`                                          | $               |
