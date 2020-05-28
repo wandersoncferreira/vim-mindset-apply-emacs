@@ -42,6 +42,7 @@ Summary
 3. [Let Vim Do The Typing](#vim-do-typing)
 4. [More instantly better vim](#more-instantly-vim)
 5. [My own customizations based on Vim lessons](#my-custom-lessons)
+6. [7 Habits for Effective Text Editing 2.0 by Molenaar](#7vim)
 
 
 ### General tips
@@ -180,7 +181,7 @@ You should read [Saving Text in Registers](https://www.gnu.org/software/emacs/ma
 
 1. Set column to 100 (I like this idea too) `(setq-default fill-column 100)`
 2. Highlight all the chars that passes that column `(setq whitespace-line-column 100)`
-3. No tabs in the beginning of the lines and no trailing spaces
+3. No tabs in the beginning of the l2ines and no trailing spaces
 4. Highlight tabs and trailing whitespaces `(setq whitespace-style '(trailing tabs tab-mark))`
 5. Remap very frequently commands to more useful ones
 6. Always think how to improve your current workflow instead of memorizing keys
@@ -258,3 +259,101 @@ just did it.
 If you wanted to `change` the text, well done you just did it.  If you wanted to `copy` the text,
 well done you just did it... but you "lost" the text, right? Yeah, just use `C-/` to undo and then
 `C-y` to paste where you want.
+
+
+# 6. <a name="7vim"></a> [7 Habits for Effective Text Editing 2.0 by Molenaar](https://youtu.be/p6K4iIMlouI)
+
+Selecting a good editor is the first step towards effective text editing.
+
+Three basic steps:
+  * Detect inefficiency
+  * Find quicker way
+  * How to make it a habit
+  
+Use more the [Emacs Wiki](https://www.emacswiki.org/emacs/SiteMap) page to find ways to improve your workflow.
+
+#### 6.1. Moving around quickly
+  * The `*` command is very useful. Emacs:  `M-s .`
+  * In emacs I also think we should keep using `ace-jump` with `C-;`
+  * Make folding a habit. I configured `hs-hide-mode`, `C-=`, `C-+`, `C--`
+
+#### 6.2. Don't type anything twice
+  * `C-n` autocompletion in Vim...Emacs: `C-M-i` (completion), `M-/` (dabbrev-expand).
+  * `omni-completion` in Vim... Emacs: `company-mode`
+
+#### 6.3. Fix when it's wrong
+  * Emacs: `flyspell`
+  * Emacs: make more abbreviations. See the functions below that help you out.
+
+  ```elisp
+(defun bk/add-region-local-abbrev (start end)
+  "Go from START to END and add the selected text to a local abbrev."
+  (interactive "r")
+  (if (use-region-p)
+      (let ((num-words (count-words-region start end)))
+	(add-mode-abbrev num-words)
+	(deactivate-mark))
+    (message "No selected region!")))
+
+(global-set-key (kbd "C-x a l") 'bk/add-region-local-abbrev)
+
+(defun bk/add-region-global-abbrev (start end)
+  "Go from START to END and add the selected text to global abbrev."
+  (interactive "r")
+  (if (use-region-p)
+      (let ((num-words (count-words-region start end)))
+	(add-abbrev global-abbrev-table "Global" num-words)
+	(deactivate-mark))
+    (message "No selected region!")))
+
+(global-set-key (kbd "C-x a g") 'bk/add-region-global-abbrev)
+  ```
+  
+You can also define a global table of abbreviations
+```elisp
+
+(define-abbrev-table 'global-abbrev-table
+  '(
+    ("reuslt" "result" nil 0)
+    ("requier" "require" nil 0)
+    ))
+```
+
+And activate the mode
+```elisp
+
+(add-hook 'prog-mode-hook 'abbrev-mode)
+```
+
+#### 6.4. A file seldom comes alone
+
+When you need move around files in a project.
+
+  * Emacs: `projectile`
+  * Learn more CTAGS(?) Seems like `dumb-jump` and `xref-find-definitions` is very very good enough to me
+  * Use `grep` in the project to find full usages. Emacs: `projectile`-many-many-subcommands
+  
+#### 6.5. Let's work together
+  * Try to use more Emacs to do everything related to text editing
+  
+#### 6.6. Text is structured
+  * Write some small programs to parse desired texts
+
+#### 6.7. Sharpen the saw
+  * You have to keep on tuning the set of commands you use for your needs.
+  * Use feedbacks: Learn from your usage.
+
+
+#### Summary
+	
+Step 1: Detect inefficiency
+  * Find out what you waste time on
+Step 2: Find a quicker way
+  * read on-line help
+  * read the quick reference, books, etc
+  * ask friends and colleagues
+  * search the internet
+  * do it yourself
+Step 3: Make it a habit
+  * do it
+  * keep on improving
