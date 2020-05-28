@@ -66,9 +66,9 @@ Summary
 
   | Emacs Keys | Objective                                                       | Vim counterpart |
   |------------|-----------------------------------------------------------------|-----------------|
-  | M-r        | Go to the last, middle,top visible line of the screen           | H,L,M           |
-  | C-l        | Center the current line                                         | zz              |
-  | C-v, M-v   | Scroll without moving the cursor `(bk/scroll-{up,down})`        | C-y, C-e        |
+  | M-r        | Go to the last, middle,top visible line of the screen           | {H,L,M}         |
+  | C-l        | Center the current line                                         |  {z,z}          |
+  | C-v, M-v   | Scroll without moving the cursor `(bk/scroll-{up,down})`        |  C-y, C-e       |
   | C-a        | `bk/smart-beginning-of-line`                                    | 0               |
   | C-e        | `bk/smart-end-of-line`                                          | $               |
   | M-s .      | Search for the current word on point and look other occurrences | *               |
