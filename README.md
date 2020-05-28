@@ -153,10 +153,19 @@ Summary
 
 - Vim users seems to take great advantage of *registers*
 - Would be nice to have tabs? (Idk, for now I am just toooo used to changing buffers with `ido`)
-- Is real nice to have a `drop-down-menu` to your completions, `auto-complete` package seems more suitable
+- Is real nice to have a `drop-down-menu` to your completions, `company` package seems more suitable
 - C Tags is cool! I made the setup but I am not using that much.
 
 You should read [Saving Text in Registers](https://www.gnu.org/software/emacs/manual/html_node/emacs/Text-Registers.html#Text-Registers)
+
+Interesting commands in `company-mode`:
+- When candidate drop-down appears, search for match using `C-M-s` I remapped to `C-s` see below
+- Show numbers besides candidate name `(setq company-show-numbers t)`, choose based by number with `M-<number>`
+
+```elisp
+(define-key company-active-map [(control) (meta) ?s] 'company-search-candidates)
+(define-key company-active-map "\C-s" 'company-filter-candidates)
+```
 
 #### Functions
 
