@@ -72,8 +72,8 @@ Summary
   | C-a        | `bk/smart-beginning-of-line`                                    | 0               |
   | C-e        | `bk/smart-end-of-line`                                          | $               |
   | M-s .      | Search for the current word on point and look other occurrences | *               |
-  | C-.        | Set a register at a specific point `(bk/point-to-register)`     | C-o             |
-  | C-,        | Jump back to register specified above `(bk/jump-to-register)`   | C-i             |
+  | C-c r p    | Set a register at a specific point `(bk/point-to-register)`     | C-o             |
+  | C-c r j    | Jump back to register specified above `(bk/jump-to-register)`   | C-i             |
   | M-n        | `(jump-char-forward)`                                           | f,t             |
   | M-p        | `(jump-char-backward)`                                          | F, T            |
   | M-{a,e}    | Move through paragraphs                                         | { and }         |
@@ -362,3 +362,9 @@ Step 2: Find a quicker way
 Step 3: Make it a habit
   * do it
   * keep on improving
+
+
+# 7. <a name="hjkl-to-plugins"></a> []()
+
+1. Use `hooks` to execute commands in specific buffers based on mode
+
