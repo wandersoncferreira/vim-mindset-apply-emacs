@@ -134,8 +134,11 @@ Summary
 | Stop using arrow keys                               | Stop using arrow keys                           |
 | Use more `jump-char` to move around                 | Use more `f` and `t` to movement                |
 | If you hold any character consider this a smell     | If you hold any character consider this a smell |
-| **NOT CLEAR YET HOW TO HANDLE IN EMACS**            | Use the repeat command                          |
+| [dotMode](https://www.emacswiki.org/emacs/DotMode)  | Use the repeat command                          |
 | Use fuzzy finders (learn ripgrep though)            | Use fuzzy finders                               |
+
+I started using the `dotmode.el` to reproduce the `repeat` command, but to be honest, not very
+useful so far. I used this to replace the recording of small macros.
 
 
 
@@ -147,8 +150,8 @@ Summary
 | M-/              | Complete with omni-completion                            | `several keychords in ^X-mode` |
 | M-\              | Complete file names `(comint-dynamic-complete-filename)` | C-x C-f (in X mode)            |
 | C-c l            | Complete last line from context `(bk/try-complete-line)` | C-x C-l (in X mode)            |
-| C-x r s \<char\> | Copy region into register <char> `(copy-to-register)`    | "<char>yy                       |
-| C-x r i \<char\> | Insert text from register <char> `(insert-register)`     | "<char>p                        |
+| C-x r s \<char\> | Copy region into register <char> `(copy-to-register)`    | "<char>yy                      |
+| C-x r i \<char\> | Insert text from register <char> `(insert-register)`     | "<char>p                       |
 | s-.              | Find tags (C-Tags)                                       |                                |
 
 - Vim users seems to take great advantage of *registers*
