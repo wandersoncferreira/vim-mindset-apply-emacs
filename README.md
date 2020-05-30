@@ -365,9 +365,3 @@ Step 2: Find a quicker way
 Step 3: Make it a habit
   * do it
   * keep on improving
-
-
-# 7. <a name="hjkl-to-plugins"></a> []()
-
-1. Use `hooks` to execute commands in specific buffers based on mode
-
