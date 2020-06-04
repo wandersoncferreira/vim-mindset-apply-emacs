@@ -251,6 +251,19 @@ using the Universal Argument `C-u` and a negative arg e.g. `C-u -1`.
 
 Bound to `C-c k f` and `C-c k b` to `kill forward` and `kill backward`
 
+#### UPDATED: 2020-06-04
+
+You can use this awesome package [zzz-to-char](https://github.com/mrkkrp/zzz-to-char) which combines
+`zap-to-char` and `avy` so you can proper chose to which character you want to go.
+I am using the following bindings:
+
+```elisp
+(global-set-key (kbd "C-c k u") 'zzz-up-to-char)
+(global-set-key (kbd "C-c k c") 'zzz-to-char)
+```
+Meaning `u` to `up-to-char` and `to-char`. Now, the direction is only controlled by `avy`.
+Thanks [Ian](https://github.com/ianffcs) for pointing out.
+
 
 ### Change inner
 
